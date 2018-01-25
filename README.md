@@ -1,6 +1,7 @@
 # React ES6 Webpack Boilerplate
 
-Boilerplate for kick starting a project with the following technologies:
+Extremely lightweight boilerplate for kick starting a project with the following technologies:
+
 * [React](https://github.com/facebook/react)
 * [Babel 6](http://babeljs.io)
 * [Webpack](http://webpack.github.io) for bundling
@@ -9,20 +10,17 @@ Boilerplate for kick starting a project with the following technologies:
 
 The various webpack options used have been explained in detailed as comments in the config file. Should help with understanding the nitty-gritty :)
 
-
 ### Usage
 
-```
-npm install
-npm start
-Open http://localhost:5000
-```
-
-### Linting
-
-ESLint with React linting options have been enabled.
+Start by creating a `.env` file in the root directory.
 
 ```
-npm run lint
+PORT=5000
 ```
 
+Then run (if you're using yarn):
+
+```
+yarn
+yarn start
+```

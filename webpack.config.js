@@ -1,11 +1,11 @@
+require("dotenv").config();
 const webpack = require("webpack");
 const path = require("path");
-
-require("dotenv").config();
+const port = process.env.PORT || 3000;
 
 module.exports = {
   entry: [
-    "webpack-dev-server/client?http://localhost:5000",
+    `webpack-dev-server/client?http://localhost:${port}`,
     "webpack/hot/dev-server",
     "./app/index"
   ],
