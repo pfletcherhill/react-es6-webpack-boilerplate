@@ -44,25 +44,25 @@
  * equivalent ES5 source that is actually delivered to the end user browser.
  */
 
-const webpack = require('webpack');
-const path = require('path');
+const webpack = require("webpack");
+const path = require("path");
 
 module.exports = {
-  entry: './scripts/index',
+  entry: "./app/index",
   output: {
-    path: path.join(__dirname, 'static'),
-    filename: 'bundle.js',
-    publicPath: '/'
+    path: path.join(__dirname, "static"),
+    filename: "bundle.js",
+    publicPath: "/"
   },
   resolve: {
-    extensions: ['', '.js']
+    extensions: ["", ".js"]
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   plugins: [
     new webpack.optimize.OccurenceOrderPlugin(),
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production')
+      "process.env": {
+        NODE_ENV: JSON.stringify("production")
       }
     }),
     new webpack.optimize.UglifyJsPlugin({
@@ -75,8 +75,8 @@ module.exports = {
     loaders: [
       {
         test: /\.jsx?$/,
-        loaders: ['babel'],
-        include: path.join(__dirname, 'scripts')
+        loaders: ["babel"],
+        include: path.join(__dirname, "app")
       }
     ]
   }

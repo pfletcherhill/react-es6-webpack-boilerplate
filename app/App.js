@@ -1,7 +1,8 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 export default class App extends Component {
   render() {
+    console.log("render", this);
     return (
       // Add your component markup and other subcomponent references here.
       <h1>Hello, World!</h1>
